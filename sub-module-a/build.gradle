@@ -1,0 +1,16 @@
+group 'com.existmaster.gradle'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'spring-boot'
+
+jar {
+    baseName = 'gradletest'
+    version = '0.0.1-SNAPSHOT'
+}
+dependencies {
+    compile project(':sub-module-b')
+    //compile project(':sub-module-c')
+    compile("org.springframework.boot:spring-boot-starter-web:1.4.0.RELEASE")
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
