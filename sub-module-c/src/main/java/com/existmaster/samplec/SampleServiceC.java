@@ -5,10 +5,7 @@ import org.springframework.stereotype.Service;
 /**
  * Created by existmaster on 2016. 8. 5..
  */
-@Service
-public class SampleServiceC {
+public interface SampleServiceC {
 
-    public void service() {
-
-    }
+    public String service();
 }

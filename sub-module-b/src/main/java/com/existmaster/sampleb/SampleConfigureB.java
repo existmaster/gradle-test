@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Import;
  */
 @Configuration
 @ComponentScan
-@Import(SampleConfigureC.class)
+//@Import(SampleConfigureC.class)
 @EnableAutoConfiguration
 public class SampleConfigureB {
     public static void main(String[] args) {

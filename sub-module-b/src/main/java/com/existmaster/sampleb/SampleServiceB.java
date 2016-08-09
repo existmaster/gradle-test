@@ -2,16 +2,18 @@ package com.existmaster.sampleb;
 
 import com.existmaster.samplec.SampleServiceC;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  * Created by existmaster on 2016. 8. 5..
  */
+@Service
 public class SampleServiceB {
 
     @Autowired
     private SampleServiceC sampleServiceC;
 
-    public void methodA() {
-        sampleServiceC.service();
+    public String methodA() {
+        return sampleServiceC.service();
     }
 }

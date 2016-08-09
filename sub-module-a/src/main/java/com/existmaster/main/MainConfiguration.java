@@ -1,6 +1,7 @@
 package com.existmaster.main;
 
 import com.existmaster.sampleb.SampleConfigureB;
+import com.existmaster.samplec.SampleConfigureC;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
@@ -9,7 +10,7 @@ import org.springframework.context.annotation.Import;
 /**
  * Created by existmaster on 2016. 8. 5..
  */
-@Import({SampleConfigureB.class})
+@Import({SampleConfigureB.class, SampleConfigureC.class})
 @EnableAutoConfiguration
 @ComponentScan
 public class MainConfiguration {
