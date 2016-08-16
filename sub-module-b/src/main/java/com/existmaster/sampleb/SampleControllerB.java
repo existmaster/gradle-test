@@ -1,7 +1,7 @@
 package com.existmaster.sampleb;
 
-import com.existmaster.samplec.entity.Person;
-import com.existmaster.samplec.logic.PersonLogic;
+import com.existmaster.person.entity.Person;
+import com.existmaster.person.logic.PersonLogic;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

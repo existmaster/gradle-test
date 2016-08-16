@@ -1,6 +1,6 @@
 package com.existmaster.sampleb;
 
-import com.existmaster.samplec.logic.PersonLogic;
+import com.existmaster.person.logic.PersonLogic;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
