@@ -1,7 +1,7 @@
 package com.existmaster.samplec.logic;
 
 import com.existmaster.samplec.entity.Person;
-import com.existmaster.samplec.store.PersonStoreImpl;
+import com.existmaster.samplec.store.jpa.PersonStoreJPAImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 public class PersonLogicImpl implements PersonLogic {
 
     @Autowired
-    PersonStoreImpl personStore;
+    PersonStoreJPAImpl personStore;
 
     @Override
     public void RegistrationPerson(String id, String name) {

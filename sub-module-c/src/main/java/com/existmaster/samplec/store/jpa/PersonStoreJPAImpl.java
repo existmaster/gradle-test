@@ -1,6 +1,7 @@
-package com.existmaster.samplec.store;
+package com.existmaster.samplec.store.jpa;
 
 import com.existmaster.samplec.entity.Person;
+import com.existmaster.samplec.store.PersonStore;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -8,7 +9,7 @@ import org.springframework.stereotype.Repository;
  * Created by existmaster on 2016. 8. 16..
  */
 @Repository
-public class PersonStoreImpl implements PersonStore{
+public class PersonStoreJPAImpl implements PersonStore {
 
     @Autowired
     PersonRepository personRepository;
@@ -24,10 +25,12 @@ public class PersonStoreImpl implements PersonStore{
     }
 
     private PersonDataObject personToDataObject(Person person){
+        if(person == null) return null;
         return new PersonDataObject(person.getId(), person.getName());
     }
 
     private Person DataObjectToPerson(PersonDataObject personDataObject) {
+        if(personDataObject == null) return null;
         return new Person(personDataObject.getId(), personDataObject.getName());
     }
 }

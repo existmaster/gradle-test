@@ -1,4 +1,4 @@
-package com.existmaster.samplec.store;
+package com.existmaster.samplec.store.jpa;
 
 import org.springframework.data.repository.CrudRepository;
 

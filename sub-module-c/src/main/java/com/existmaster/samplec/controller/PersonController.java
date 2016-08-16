@@ -15,12 +15,6 @@ public class PersonController {
     @Autowired
     PersonLogic personLogic;
 
-//    @RequestMapping("/")
-//    public String home() {
-//        return "Hello sub-module C";
-//    }
-
-
     @RequestMapping(method = RequestMethod.POST)
     public String registrationPerson(@RequestBody PersonTransformObject p) {
         personLogic.RegistrationPerson(p.getId(), p.getName());
