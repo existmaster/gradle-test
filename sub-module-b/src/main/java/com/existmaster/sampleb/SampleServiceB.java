@@ -1,6 +1,6 @@
 package com.existmaster.sampleb;
 
-import com.existmaster.samplec.SampleServiceC;
+import com.existmaster.samplec.logic.PersonLogic;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,9 +11,9 @@ import org.springframework.stereotype.Service;
 public class SampleServiceB {
 
     @Autowired
-    private SampleServiceC sampleServiceC;
+    private PersonLogic personLogic;
 
-    public String methodA() {
-        return sampleServiceC.service();
+    public void methodA() {
+        personLogic.RegistrationPerson("a", "b");
     }
 }

@@ -1,6 +1,6 @@
 package com.existmaster.sampleb;
 
-import com.existmaster.samplec.SampleConfigureC;
+import com.existmaster.samplec.PersonConfigure;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Import;
  */
 @Configuration
 @ComponentScan
-//@Import(SampleConfigureC.class)
+@Import(PersonConfigure.class)
 @EnableAutoConfiguration
 public class SampleConfigureB {
     public static void main(String[] args) {

@@ -11,9 +11,9 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @ComponentScan
 @EnableAutoConfiguration
-public class SampleConfigureC{
+public class PersonConfigure {
     public static void main(String[] args) {
-        SpringApplication.run(SampleConfigureC.class, args);
+        SpringApplication.run(PersonConfigure.class, args);
     }
 
 }

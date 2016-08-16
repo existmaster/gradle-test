@@ -1,5 +1,7 @@
 package com.existmaster.sampleb;
 
+import com.existmaster.samplec.entity.Person;
+import com.existmaster.samplec.logic.PersonLogic;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,12 +15,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class SampleControllerB{
 
     @Autowired
-    SampleServiceB sampleServiceB;
+    PersonLogic personLogic;
 
     @RequestMapping("/b")
     @ResponseBody
-    String home() {
-        return sampleServiceB.methodA();
+    Person home() {
+        return personLogic.findPerson("existmaster");
     }
 
 }
