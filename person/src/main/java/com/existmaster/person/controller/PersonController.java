@@ -5,6 +5,8 @@ import com.existmaster.person.logic.PersonLogic;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 /**
  * Created by existmaster on 2016. 8. 4..
  */
@@ -17,12 +19,17 @@ public class PersonController {
 
     @RequestMapping(method = RequestMethod.POST)
     public String registrationPerson(@RequestBody PersonTransformObject p) {
-        personLogic.RegistrationPerson(p.getId(), p.getName());
+        personLogic.RegistrationPerson(p.getId(), p.getName(), p.getDomain());
         return "Success!";
     }
 
-    @RequestMapping("/{id}")
+    @RequestMapping(value = "/{id}")
     public Person findPerson(@PathVariable String id) {
         return personLogic.findPerson(id);
+    }
+
+    @RequestMapping(value = "/search/{domain}")
+    public List<Person> findPersonByDomain(@PathVariable String domain) {
+        return personLogic.findByDomainPerson(domain);
     }
 }

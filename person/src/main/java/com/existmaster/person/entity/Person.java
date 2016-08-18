@@ -7,13 +7,15 @@ public class Person {
 
     String id;
     String name;
+    String domain;
 
     public Person() {
     }
 
-    public Person(String id, String name) {
+    public Person(String id, String name, String domain) {
         this.id = id;
         this.name = name;
+        this.domain = domain;
     }
 
     public String getId() {
@@ -30,5 +32,13 @@ public class Person {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getDomain() {
+        return domain;
+    }
+
+    public void setDomain(String domain) {
+        this.domain = domain;
     }
 }

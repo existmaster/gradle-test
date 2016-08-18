@@ -13,12 +13,15 @@ public class PersonDataObject {
 
     private String name;
 
+    private String domain;
+
     public PersonDataObject() {
     }
 
-    public PersonDataObject(String id, String name) {
+    public PersonDataObject(String id, String name, String domain) {
         this.id = id;
         this.name = name;
+        this.domain = domain;
     }
 
     public String getId() {
@@ -27,5 +30,9 @@ public class PersonDataObject {
 
     public String getName() {
         return name;
+    }
+
+    public String getDomain() {
+        return domain;
     }
 }
