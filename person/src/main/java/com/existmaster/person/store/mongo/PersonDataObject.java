@@ -1,14 +1,14 @@
 package com.existmaster.person.store.mongo;
 
-import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
  * Created by existmaster on 2016. 8. 16..
  */
 
+@Document(collection = "person")
 public class PersonDataObject {
 
-    @Id
     private String id;
 
     private String name;
