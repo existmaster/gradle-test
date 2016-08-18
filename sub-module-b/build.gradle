@@ -5,8 +5,7 @@ apply plugin: 'java'
 apply plugin: 'spring-boot'
 
 dependencies {
-    compile project(":person-h2")
-    compile project(":person-mysql")
+    compile project(":person")
     compile("org.springframework.boot:spring-boot-starter-web:1.4.0.RELEASE")
     testCompile group: 'junit', name: 'junit', version: '4.11'
 }

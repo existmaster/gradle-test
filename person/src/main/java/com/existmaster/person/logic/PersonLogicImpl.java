@@ -1,7 +1,7 @@
 package com.existmaster.person.logic;
 
 import com.existmaster.person.entity.Person;
-import com.existmaster.person.store.jpa.PersonStoreJPAImpl;
+import com.existmaster.person.store.mongo.PersonStoreMongoImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 public class PersonLogicImpl implements PersonLogic {
 
     @Autowired
-    PersonStoreJPAImpl personStore;
+    PersonStoreMongoImpl personStore;
 
     @Override
     public void RegistrationPerson(String id, String name) {

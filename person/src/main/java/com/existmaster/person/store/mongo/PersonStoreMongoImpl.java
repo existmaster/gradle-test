@@ -1,4 +1,4 @@
-package com.existmaster.person.store.jpa;
+package com.existmaster.person.store.mongo;
 
 import com.existmaster.person.entity.Person;
 import com.existmaster.person.store.PersonStore;
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
  * Created by existmaster on 2016. 8. 16..
  */
 @Repository
-public class PersonStoreJPAImpl implements PersonStore {
+public class PersonStoreMongoImpl implements PersonStore {
 
     @Autowired
     PersonRepository personRepository;

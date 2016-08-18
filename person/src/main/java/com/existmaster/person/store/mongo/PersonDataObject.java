@@ -1,12 +1,11 @@
-package com.existmaster.person.store.jpa;
+package com.existmaster.person.store.mongo;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import org.springframework.data.annotation.Id;
 
 /**
  * Created by existmaster on 2016. 8. 16..
  */
-@Entity
+
 public class PersonDataObject {
 
     @Id
