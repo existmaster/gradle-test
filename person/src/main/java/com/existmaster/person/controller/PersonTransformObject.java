@@ -7,13 +7,15 @@ public class PersonTransformObject {
 
     private String id;
     private String name;
+    private String domain;
 
     public PersonTransformObject() {
     }
 
-    public PersonTransformObject(String id, String name) {
+    public PersonTransformObject(String id, String name, String domain) {
         this.id = id;
         this.name = name;
+        this.domain = domain;
     }
 
     public String getId() {
@@ -30,5 +32,13 @@ public class PersonTransformObject {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getDomain() {
+        return domain;
+    }
+
+    public void setDomain(String domain) {
+        this.domain = domain;
     }
 }
