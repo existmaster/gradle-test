@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: person-service
+  data:
+    mongodb:
+      database: so
+      host: localhost
+      port: 27017
+      repositories:
+        enabled: true

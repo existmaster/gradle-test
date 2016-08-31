@@ -11,19 +11,18 @@ import java.util.List;
  * Created by existmaster on 2016. 8. 4..
  */
 @RestController
-@RequestMapping("/person")
 public class PersonController {
 
     @Autowired
     PersonLogic personLogic;
 
-    @RequestMapping(method = RequestMethod.POST)
+    @RequestMapping(value = "/", method = RequestMethod.POST)
     public String registrationPerson(@RequestBody PersonTransformObject p) {
         personLogic.RegistrationPerson(p.getId(), p.getName(), p.getDomain());
         return "Success!";
     }
 
-    @RequestMapping(value = "/{id}")
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public Person findPerson(@PathVariable String id) {
         return personLogic.findPerson(id);
     }
